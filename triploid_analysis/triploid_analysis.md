@@ -110,7 +110,7 @@ Output:
 (<NodeView: Node 39600 in SDG>, <NodeView: Node 40829 in SDG>)
 ```
 
-![A_vs_B_bubble](/Users/kathodgkinson/workdir/Fcylindrus/workspaces/workspace_directories/new_sdg_workspace/sdg-triploid_analysis/A_vs_B_bubble.png)
+![A_vs_B_bubble](./A_vs_B_bubble.png)
 
 This shows both contigs of the bubble consist of k-mers either uniquely, or twice. These are divergent haplotypes.
 
@@ -118,7 +118,7 @@ This shows both contigs of the bubble consist of k-mers either uniquely, or twic
 (<NodeView: Node 40374 in SDG>, <NodeView: Node 43283 in SDG>)
 ```
 
-![C_vs_AB_bubble](/Users/kathodgkinson/workdir/Fcylindrus/workspaces/workspace_directories/new_sdg_workspace/sdg-triploid_analysis/C_vs_AB_bubble.png)
+![C_vs_AB_bubble](./C_vs_AB_bubble.png)
 
 This shows one of the contigs contains kmers that occur uniquely or three times, and the other contains k-mers that occur twice or three times. In other words, the second contig represents two collapsed haplotypes. 
 
@@ -146,11 +146,11 @@ plt.savefig("all_bubbles.png")
 
 Graph structure can be viewed using BANDAGE. The following two graphs show  the DBG of the aforementioned bubbles. Blue/pink is where two haplotypes diverge, and red is the two collapsed haplotypes. 
 
-![A_B_divergence](/Users/kathodgkinson/workdir/Fcylindrus/workspaces/workspace_directories/new_sdg_workspace/sdg-triploid_analysis/A_B_divergence.png)
+![A_B_divergence](./A_B_divergence.png)
 
-![AB_C_divergence](/Users/kathodgkinson/workdir/Fcylindrus/workspaces/workspace_directories/new_sdg_workspace/sdg-triploid_analysis/AB_C_divergence.png)Divergence between three haplotypes becomes fragmented as contiguity drops. In this complex knot of contigs, we can trace three potential paths through this fragmented region. This represents three haplotypes that we need to untangle. 
+![AB_C_divergence](./AB_C_divergence.png)Divergence between three haplotypes becomes fragmented as contiguity drops. In this complex knot of contigs, we can trace three potential paths through this fragmented region. This represents three haplotypes that we need to untangle. 
 
-![DBG-double-bubble](/Users/kathodgkinson/workdir/Fcylindrus/workspaces/workspace_directories/new_sdg_workspace/sdg-triploid_analysis/DBG-double-bubble.png)![DBG-double-bubble copy](/Users/kathodgkinson/workdir/Fcylindrus/workspaces/workspace_directories/new_sdg_workspace/sdg-triploid_analysis/DBG-double-bubble copy.png)
+![DBG-double-bubble](./DBG-double-bubble.png)![DBG-double-bubble_copy.png](./DBG-double-bubble_copy.png)
 
 ### Long read mapping
 
@@ -262,9 +262,8 @@ PREV:  LinkView: 25636bp to Node -31416
 
 Here, node 40829 links to nodes 43197 and 37566 in the next direction, and 34722 and 29801 in the previous direction. We confirm the k-mer distributions of those contigs and can view the haplotype in the .gfa (pink). 
 
-![manual_linkage](/Users/kathodgkinson/workdir/Fcylindrus/workspaces/workspace_directories/new_sdg_workspace/sdg-triploid_analysis/manual_linkage.png)
+![manual_linkage](./manual_linkage.png)
 
-![haplotype_linkage_k-mers](/Users/kathodgkinson/workdir/Fcylindrus/workspaces/workspace_directories/new_sdg_workspace/sdg-triploid_analysis/haplotype_linkage_k-mers.png)
+![haplotype_linkage_k-mers](./haplotype_linkage_k-mers.png)
 
 Contig 34722 is collapsed and consists of k-mers appearing two or three times. This is shared with the syntenic 39600 haplotype. The other contigs show contiguity for the rest of the diverged haplotype. 
-
