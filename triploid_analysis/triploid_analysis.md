@@ -14,11 +14,7 @@ This is split into a .gfa and accompanying .fasta using custom python scripts. V
 kat comp -o F.cylindrus_contigs_vs_reads -t8 -H 2000000000 -I 1000000000 "readfile_1.fastq readfile_2.fastq" F.cylindrus_contigs_raw.fasta
 ```
 
-Total genomic content is estimated from the spectra matrix file.
-$$
-\frac{total\; shared\; k-mers}{k-mer\; coverage}
-$$
-K-mer coverage is obtained from the mode of the fundamental frequency distribution of the spectra. 
+![comp](./comp.png)K-mer coverage is obtained from the mode of the fundamental frequency distribution of the spectra. Total genomic content is estimated from the spectra matrix file by total shared k-mers/k-mer coverage. 
 
 Bacterial contamination is isolated by k-mer frequency in a KAT sect. This contamination can be identified by BLAST, filtered for 95% coverage and 95% identity. The main F. cylindrus distribution can also be confirmed by BLAST. 
 
@@ -122,8 +118,6 @@ This shows both contigs of the bubble consist of k-mers either uniquely, or twic
 
 This shows one of the contigs contains kmers that occur uniquely or three times, and the other contains k-mers that occur twice or three times. In other words, the second contig represents two collapsed haplotypes. 
 
-
-
 To print all bubbles defined in the previous "bubbles" variable:
 
 ```python
@@ -141,8 +135,6 @@ for bubble in bubbles:
     count+=2
 plt.savefig("all_bubbles.png")
 ```
-
-
 
 Graph structure can be viewed using BANDAGE. The following two graphs show  the DBG of the aforementioned bubbles. Blue/pink is where two haplotypes diverge, and red is the two collapsed haplotypes. 
 
@@ -171,8 +163,6 @@ lm.select_by_size(1000)
 lm.report_selection()
 ```
 
-Output:
-
 ```shell
 Current selection: 11006 / 45411 nodes  with  132338414 / 145235654 bp
 ```
@@ -184,13 +174,9 @@ lr_mldg=lm.make_longreads_multilinkage(ws.long_reads_datastores[0].mapper,800,10
 lords.mapper.print_status()
 ```
 
-Output:
-
 ```shell
 Long read mappings: 7199681 mappings.
 ```
-
-
 
 We can use the long reads datastore to check the linkage between haplotypes. This allows us to manually identify haplotype contiguity.
 
@@ -199,8 +185,6 @@ node40829=lr_mldg.get_nodeview(40829)
 for n in node40829.next(): print("NEXT: ",n)
 for p in node40829.prev(): print("PREV: ",p)
 ```
-
-Output:
 
 ```shell
 NEXT:  LinkView: 410bp to Node -43197
