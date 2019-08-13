@@ -84,7 +84,7 @@ Output the number of bubbles in the selection:
 98
 ```
 
-We can compare the k-mer spectra of each side of the bubbles to see which haplotypes are diverging.
+We can compare the k-mer spectra of each side of the bubbles to confirm haplotype divergence.
 
 ```python
 print (bubbles[0])
@@ -99,8 +99,6 @@ fig.add_subplot(1,2,2)
 plt.hist([x if x < 300 else 300 for x in sub2.kmer_coverage("kmercount1", "pe")], bins=50);
 plt.show(block=True)
 ```
-
-Output:
 
 ```
 (<NodeView: Node 39600 in SDG>, <NodeView: Node 40829 in SDG>)
